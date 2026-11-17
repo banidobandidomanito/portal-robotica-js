@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+    <link href="./site.css" rel="stylesheet">
+    <title>Robotica LAB</title>
+    <meta name="description" content="Página com os estudantes participantes das atividades do Laboratório de Robótica do Campus Campo Grande">
+    <meta name="keywords" content="robótica, robótica lab, Campo Grande, Instituto Federal de Mato Grosso do Sul, IFMS, robôs, atividades">
+    <link rel="shortcut icon" href="./media/robotican-masct.png" type="image/x-icon">
+
+</head>
+<body class="estudantes">
+    <header>
+        <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+            <div class="container-fluid text-light d-flex align-items-end gap-2">
+
+                <a href="#" class="navbar-brand">
+                    <img src="./media/robotican-masct.png" alt="logo-if" width="64" class="d-inline-block align-text-top">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#abaColapsada-nav-itens" aria-controls="aria-SupportedContent" aria-expanded="false"
+                    aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="abaColapsada-nav-itens">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a href="./index.html" class="navbar-brand nav-item text-light">Início</a></li>
+                        <li class="nav-item"><a href="./sobre.html" class="navbar-brand nav-item text-light">Sobre</a></li>
+                        <li class="nav-item"><a href="./atividades.html" class="navbar-brand nav-item text-light">Atividades</a></li>
+                        <li class="nav-item"><a href="./estudantes.html" class="navbar-brand nav-item border-bottom border-2 border-light text-light fw-semibold">Estudantes</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle p-1 text-light" role="button" data-bs-toggle="dropdown">Cadastrar</a>
+                            <ul class="dropdown-menu border-0 border-start border-2 rounded shadow">
+                                <li class="dropdown-item"><a href="./forms/form-atividade.html">Atividade</a></li>
+                                <li class="dropdown-item"><a href="./forms/form-estudante.html">Estudante</a></li>
+                                <li class="dropdown-item"><a href="./forms/form-participacao.html">Participação</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <hr>
+        <div class="container py-4">
+            <!--  -->
+            <div class="p-4 bg-light text-wrap border rounded">
+                <small>Conteúdo, nomes e registros visuais desta interface são demonstrativos.</small>
+            </div>
+            <!--  -->
+            <h1 class="mt-3"><span class="fw-bold texto-verdeif">Estudantes</span></h1>
+            <h5>Estudantes cadastrados que participam das atividades do laboratório.</h5>
+            <div class="d-lg-flex justify-content-md-between gap-3">
+                <div class="container-fluid p-0" id="filtroTab-estudante" >
+                        <ul class="scroll-filtros nav nav-tabs gap-4 container-fluid align-items-center justify-content-start text-nowrap"  id="filtros-estudantes" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="texto-verdeif nav-link rounded-3 active" id="home-tab" data-bs-toggle="tab" data-bs-target="#todos"
+                                type="button" role="tab" aria-selected="true">
+                                    Todos
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="texto-verdeif nav-link rounded-3" id="home-tab" data-bs-toggle="tab" data-bs-target="#graduac"
+                                    type="button" role="tab" aria-selected="true">
+                                    Graduação
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="texto-verdeif nav-link rounded-3" id="home-tab" data-bs-toggle="tab" data-bs-target="#ensmed"
+                                    type="button" role="tab" aria-selected="true">
+                                    Ensino Médio
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="texto-verdeif nav-link rounded-3" id="home-tab" data-bs-toggle="tab" data-bs-target="#programadr"
+                                    type="button" role="tab" aria-selected="true">
+                                    Programadores
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="texto-verdeif nav-link rounded-3" id="home-tab" data-bs-toggle="tab" data-bs-target="estagiand"
+                                    type="button" role="tab" aria-selected="true">
+                                    Estagiando
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="texto-verdeif nav-link rounded-3" id="home-tab" data-bs-toggle="tab" data-bs-target="#lider"
+                                    type="button" role="tab" aria-selected="true">
+                                    Líderes
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="d-flex gap-3 align-items-start" id="filtroPesquisa-estudante">
+                        <input type="text" class="form-control border-0 border-bottom border-2 border-dark rounded-0" size="24" aria-label="Pesquisar estudante" placeholder="Ex.: Sicrano Silva">
+                        <i class="bi bi-search" id="estudante-pesquisa" data-bs-toggle="modal" data-bs-target="#modal_pesquisaEstudante" style="font-size: 32px;" aria-hidden="true"></i>
+                    </div>
+                    <div class="modal" id="modal_pesquisaEstudante" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content p-1">
+                                <div class="modal-header"><div class="modal-title fw-bold text-center">Pesquisa de estudante</div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                <div><p class="text-center fst-italic">Nenhum estudante encontrado...</p></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="container py-3">
+            <div class="row align-items-start g-3 row-estudantes">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card shadow">
+                        <div href="#" class="d-flex flex-column align-items-center align-items-md-center flex-lg-row" id="estudante-click" data-bs-toggle="modal" data-bs-target="#estudante-modal">
+                            <img class="card-img-top" src="./media/no-photo.png" alt="Foto do estudante"/>
+                            <div class="card-body">
+                                <h4 class="card-title fw-bold">Beltrano de Tal</h4>
+                                <small class="card-text fst-italic">Ensino Médio</small>
+                                <p class="card-text">Estudante participante das atividades do laboratório.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card shadow">
+                        <div href="#" class="d-flex flex-column align-items-center align-items-md-center flex-lg-row" id="estudante-click" data-bs-toggle="modal" data-bs-target="#estudante-modal">
+                            <img class="card-img-top" src="./media/no-photo.png" alt="Foto do estudante"/>
+                            <div class="card-body">
+                                <h4 class="card-title fw-bold">Beltrano de Tal</h4>
+                                <small class="card-text fst-italic">Ensino Médio</small>
+                                <p class="card-text">Estudante participante das atividades do laboratório.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card shadow">
+                        <div href="#" class="d-flex flex-column align-items-center align-items-md-center flex-lg-row" id="estudante-click" data-bs-toggle="modal" data-bs-target="#estudante-modal">
+                            <img class="card-img-top" src="./media/no-photo.png" alt="Foto do estudante"/>
+                            <div class="card-body">
+                                <h4 class="card-title fw-bold">Beltrano de Tal</h4>
+                                <small class="card-text fst-italic">Ensino Médio</small>
+                                <p class="card-text">Estudante participante das atividades do laboratório.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            </div>
+            <div class="modal p-5 p-lg-0 modal-lg" id="estudante-modal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="text-center fw-bold">Estudante</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row align-items-start">
+                                <img class="image mb-2 col-12 col-lg-4" src="./media/no-photo.png" alt="Foto do estudante"/>
+                                <div class="col-12 col-lg-8">
+                                    <h2 class="card-title fw-bold">Beltrano de Tal da Silva Souza</h2>
+                                    <small class="card-text fw-semibold fst-italic">Ensino Médio</small>
+                                    <p class="card-text">Participa de projetos e atividades de robótica, colaborando com a equipe no planejamento, na programação e nos testes de protótipos.</p>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex flex-column gap-1 mt-3">
+                                    <div class="row">
+                                        <h4 class="card-text col-12 mb-2">Participação nas atividades</h4>
+                                    </div>
+                                    <div class="row g-1">
+                                        <a href="atividade-uni.html" class="text-decoration-none col-auto">
+                                            <h6 class="text-light  bg-secondary p-1 rounded-3 ">Projeto</h6>
+                                        </a>
+                                        <a href="atividade-uni.html" class="text-decoration-none col-auto">
+                                            <h6 class="text-light  bg-secondary p-1 rounded-3">Feira</h6>
+                                        </a>
+                                        <a href="atividade-uni.html" class="text-decoration-none col-auto">
+                                            <h6 class="text-light  bg-secondary p-1 rounded-3 ">Atividade</h6>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="">
+                                    <div class="row">
+                                        <h4 class="card-text col-12 mb-2">Funções</h4>
+                                    </div>
+                                    <div class="row g-1">
+                                        <div class="col-auto">
+                                            <h6 class="text-light  bg-danger p-1 rounded-3">Programação</h6>
+                                        </div>
+                                        <div class="col-auto">
+                                            <h6 class="text-light  bg-success p-1 rounded-3">Organização</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="mt-5 mb-2 px-2">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-12 col-lg-6 border-start border-1 d-flex flex-column align-items-start gap-1">
+                    <h3 class="text-nowrap fw-bold text texto-verdeif p-0 m-0">IFMS · Campus Campo Grande</h3>
+                    <a href="https://www.ifms.edu.br/" target="_blank">Portal IFMS</a>
+                    <a href="https://academico.ifms.edu.br/" target="_blank">Acadêmico</a>
+                    <a href="https://servidor.ifms.edu.br/contato" target="_blank">Contato</a>
+                </div>
+                <div class="col-12 col-lg-6 col-md-6 border-start border-1 d-flex flex-column align-items-start gap-1 mb-5 mb-md-0">
+                    <h3 class="text-nowrap fw-bold text texto-verdeif p-0 m-0">Robotica LAB</h3>
+                    <a href="https://www.instagram.com/robotican.cg/" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+
+</html>

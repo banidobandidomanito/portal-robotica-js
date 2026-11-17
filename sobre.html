@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+    <link href="./site.css" rel="stylesheet">
+    <title>Robotica LAB</title>
+    <meta name="description" content="Sobre o Laboratório de Robótica do Campus Campo Grande">
+    <meta name="keywords" content="robótica, robótica lab, Campo Grande, Instituto Federal de Mato Grosso do Sul, IFMS, robôs, atividades">
+    <link rel="shortcut icon" href="./media/robotican-masct.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+            <div class="container-fluid text-light d-flex align-items-end gap-2">
+
+                <a href="#" class="navbar-brand">
+                    <img src="./media/robotican-masct.png" alt="logo-if" width="64" class="d-inline-block align-text-top">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#abaColapsada-nav-itens" aria-controls="aria-SupportedContent" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="abaColapsada-nav-itens">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a href="./index.html" class="navbar-brand nav-item text-light">Início</a></li>
+                        <li class="nav-item"><a href="./sobre.html" class="navbar-brand nav-item border-bottom border-2 border-light text-light fw-semibold">Sobre</a></li>
+                        <li class="nav-item"><a href="./atividades.html" class="navbar-brand nav-item text-light">Atividades</a></li>
+                        <li class="nav-item"><a href="./estudantes.html" class="navbar-brand nav-item text-light">Estudantes</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle p-1 text-light" role="button" data-bs-toggle="dropdown">Cadastrar</a>
+                            <ul class="dropdown-menu border-0 border-start border-2 rounded shadow">
+                                <li class="dropdown-item"><a href="./forms/form-atividade.html">Atividade</a></li>
+                                <li class="dropdown-item"><a href="./forms/form-estudante.html">Estudante</a></li>
+                                <li class="dropdown-item"><a href="./forms/form-participacao.html">Participação</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <hr>
+        <div class="container py-4">
+            <!--  -->
+            <div class="p-4 bg-light text-wrap border rounded">
+                <small>Conteúdo, nomes e registros visuais desta interface são demonstrativos.</small>
+            </div>
+            <!--  -->
+            <div class="rounded d-flex flex-column-reverse flex-lg-row align-items-center align-items-lg-start p-3 gap-2 mb-4 shadow">
+                <div class="col-12 col-lg-6 p-2">
+                    <h1 class="fw-semibold text-center text-md-start">Sobre o <span class="fw-bolder texto-verdeif">Laboratório</span></h1>
+                    <h4 class="text-center text-md-start my-4">Laboratório de Robótica do IFMS - Campus Campo Grande</h4>
+                    <p>O Laboratório de Robótica do IFMS promove atividades de ensino, pesquisa e extensão para aproximar estudantes da robótica, da programação e da inovação tecnológica.</p>
+                </div>
+                <div class="col-12 col-lg-6 p-0 m-0 ">
+                    <div class="carousel slide px-3 s" id="carrossel-laboratorio" data-bs-touch="true" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded shadow">
+                            <div class="carousel-item ratio ratio-16x9 active">
+                                <img src="./media/no-image.jpg" alt="imagem da atividade">
+                            </div>
+                            <div class="carousel-item ratio ratio-16x9">
+                                <img src="./media/no-image.jpg" alt="imagem da atividade">
+                            </div>
+                            <div class="carousel-item ratio ratio-16x9">
+                                <img src="./media/no-image.jpg" alt="imagem da atividade">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center justify-content-md-start align-items-center g-3">
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="rounded p-3 d-flex flex-column align-items-center align-items-md-start shadow">
+                        <figure class="d-flex justify-content-center justify-content-md-start ">
+                            <i class="bi bi-book-half" style="font-size: 30px;" aria-hidden="true"></i>
+                        </figure>
+                        <div class="">
+                            <h3 class="text-center text-md-start">Nossa História</h3>
+                            <p>O laboratório reúne estudantes e servidores em projetos que incentivam a aprendizagem colaborativa e a experimentação.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="rounded p-3 d-flex flex-column align-items-center align-items-md-start shadow">
+                        <figure class="d-flex justify-content-center justify-content-md-start">
+                            <i class="bi bi-bullseye" style="font-size: 30px;" aria-hidden="true"></i>
+                        </figure>
+                        <div class="">
+                            <h3 class="text-center text-md-start">Missão</h3>
+                            <p>Promover o acesso à robótica e à tecnologia por meio de projetos, oficinas e atividades práticas.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-4">
+                    <div class="rounded p-3 d-flex flex-column align-items-center align-items-md-start shadow">
+                        <figure class="d-flex justify-content-center justify-content-md-start">
+                            <i class="bi bi-gear" style="font-size: 30px;" aria-hidden="true"></i>
+                        </figure>
+                        <div class="">
+                            <h3 class="text-center text-md-start">Especialidades</h3>
+                            <p>Robótica, programação, eletrônica e desenvolvimento de protótipos.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="https://www.ifms.edu.br" target="_blank" class="text-decoration-none col-12 col-lg-8">
+                    <div class="rounded p-3 d-flex flex-column d-lg-flex align-items-center gap-lg-3 iterativo shadow">
+                        <figure class="d-flex justify-content-center justify-content-md-start">
+                            <i class="bi bi-buildings" style="font-size: 30px;" aria-hidden="true"></i>
+                        </figure>
+                        <div class="texto-verdeif">
+                            <h3 class="text-center text-md-start">Vínculo ao <span class="fw-bold">IFMS</span></h3>
+                            <p>O laboratório integra as iniciativas do Instituto Federal de Mato Grosso do Sul, no Campus Campo Grande.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer class="mt-5 mb-2 px-2">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-12 col-lg-6 border-start border-1 d-flex flex-column align-items-start gap-1">
+                    <h3 class="text-nowrap fw-bold text texto-verdeif p-0 m-0">IFMS · Campus Campo Grande</h3>
+                    <a href="https://www.ifms.edu.br/" target="_blank">Portal IFMS</a>
+                    <a href="https://academico.ifms.edu.br/" target="_blank">Acadêmico</a>
+                    <a href="https://servidor.ifms.edu.br/contato" target="_blank">Contato</a>
+                </div>
+                <div class="col-12 col-lg-6 col-md-6 border-start border-1 d-flex flex-column align-items-start gap-1 mb-5 mb-md-0">
+                    <h3 class="text-nowrap fw-bold text texto-verdeif p-0 m-0">Robotica LAB</h3>
+                    <a href="https://www.instagram.com/robotican.cg/" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</html>

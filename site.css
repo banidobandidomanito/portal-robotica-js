@@ -1,0 +1,115 @@
+:root{
+    --verdeif: #2F9E41;
+    --vermelhoif: #CD191E;
+}
+
+a, a:visited, a:hover, a:focus, a { 
+    color: #000;
+}
+button:active, button:hover, button:focus, button{
+    color: #000;
+}
+.texto-verdeif {
+    color: var(--verdeif);
+}
+.texto-vermelhoif {
+    color: var(--vermelhoif) ;
+}
+.iterativo{
+    background-color: hwb(129 95% 0%);
+}
+body.estudantes {
+    overflow-x: hidden;
+}
+
+.row-atividades > div > div:hover, .row-estudantes > div > div:hover, .iterativo:hover{
+    border: var(--verdeif) 1px ridge;
+    box-shadow: rgb(200, 200, 200) -5px 5px 8px !important;
+}
+.navbar-nav > .nav-item > a.navbar-brand:hover, .navbar > .nav-item > a.navbar-brand:hover{
+    color: #2F9E41 !important;
+    border-color: #2F9E41 !important;
+}
+
+.nav-pills > .nav-item > .nav-link {
+    color: black;
+}
+.nav-pills > .nav-item > .nav-link.active {
+    background-color: #e9faec;
+    color: var(--verdeif);
+}
+
+.scroll-filtros{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+}
+.scroll-filtros > li{
+    width: 25%;
+    scroll-snap-align: start;
+}
+.scroll-destaque{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+}
+.scroll-cronograma{
+    flex-wrap: nowrap;
+    text-wrap: wrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    scrollbar-color: #2f9e41 transparent;
+    scrollbar-width: thin;
+}
+.scroll-cronograma > tr > td, .scroll-cronograma > thead > tr > th, .scroll-cronograma > tbody > tr > td{
+    max-width: 150px;
+}
+.scroll-galeria{
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 490px;
+    overscroll-behavior-y: contain;
+
+    scrollbar-color: #2f9e41 transparent;
+    scrollbar-width: thin;
+}
+.scroll-destaque > li{
+    min-width: 25%;
+    scroll-snap-align: start;
+}
+
+@media (max-width: 700px) {
+    .scroll-destaque > li{
+    min-width: 50%;
+    scroll-snap-align: start;
+    }
+    .scroll-cronograma > tr > td, .scroll-cronograma > thead > tr > th, .scroll-cronograma > tbody > tr > td{
+        min-width: 150px;
+        max-width: 350px;
+    }
+}
+
+.imagem-atividade{
+    aspect-ratio: 16/10;
+    inline-size: 100%;
+    object-fit: cover;
+}
+ .imagem-lab{
+    inline-size: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+ .tabela-galeria, .foto-estudante{
+    inline-size: 100%;
+    aspect-ratio: 4/4;
+    object-fit: cover;
+}
