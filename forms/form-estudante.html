@@ -51,37 +51,51 @@
         <div class="container py-4">
             <h3><span class="fw-bold texto-verdeif">Cadastro de Estudante</span></h3>
             <p>Cadastre-se para participar de projetos e atividades realizadas pelo laboratório.</p>
-            <form class="p-3 border border-2 rounded">
+
+
+
+
+            <form class="p-3 border border-2 rounded" id="est-form" action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
+
                 <div class="">
-                    <label for="estudanteNome" class="form-label fw-bolder">Nome Completo*</label>
-                    <input type="text" class="form-control" required>
-                </div>
-                <div class="">
-                    <label for="estudanteRA" class="form-label fw-bolder">RA*</label>
-                    <input type="number" inputmode="numeric" max="99999"  class="form-control" required>
+                    <label for="est-nome" class="form-label fw-bolder">Nome Completo*</label>
+                    <input type="text" class="form-control" id="est-nome" name="nome" required>
+                    <p class="invalid-feedback" id="est-nome-erro"></p>
                 </div>
 
                 <div class="">
-                    <label for="estudanteEmail" class="form-label fw-bolder">E-mail institucional*</label>
-                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="joaosilva@estudante.ifms.edu.br" required>
-                    <div id="emailHelp" class="form-text">Este endereço de e-mail será utilizado para confirmar o cadastro.</div>
+                    <label for="est_ra" class="form-label fw-bolder">RA*</label>
+                    <input type="number" inputmode="numeric" max="99999"  class="form-control" name="ra" id="est_ra" required>
                 </div>
+
+                <div class="">
+                    <label for="est-email" class="form-label fw-bolder">E-mail institucional*</label>
+                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="joaosilva@estudante.ifms.edu.br" id="est-email" name="email" required>
+                    <div id="emailHelp" class="form-text">Este endereço de e-mail será utilizado para confirmar o cadastro.</div>
+                    <p class="invalid-feedback" id="est-email-erro"></p>
+                </div>
+
                 <hr>
                 <div>
-                    <label for="estudanteMinibio" class="form-label fw-bolder">Minibio*</label>
-                    <textarea name="minibio" class="form-control" placeholder="Informações relevantes sobre você." id="estudanteMinibio"></textarea>
+                    <label for="est-bio" class="form-label fw-bolder">Minibio*</label>
+                    <textarea name="minibio" class="form-control" placeholder="Informações relevantes sobre você." id="est-bio" required></textarea>
+                    <p class="invalid-feedback" id="est-bio-erro"></p>
                 </div>
                 <hr>
+
                 <div class="container-fluid">
                     <label class="form-label"><p class="fw-bolder">Foto*</p></label>
                     <div class="row g-3 p-3">
                         <div class="col-12 col-lg-7 bg-light h-25 border border-1 p-3 rounded shadow">
-                            <label for="fotoEstudante" class="upload-area d-flex flex-column align-items-center justify-content-center rounded">
+                            <label for="est-foto" class="upload-area d-flex flex-column align-items-center justify-content-center rounded">
                                 <p class="fw-semibold">Enviar Foto</p>
                                 <small>A foto será exibida no perfil do estudante.</small>
                             </label>
-                            <input type="file" id="fotoEstudante" accept="image/jpeg,image/png,image/webp" hidden>
+                            <input type="file" id="est-foto" accept="image/jpeg,image/png,image/webp" name="foto" hidden>
+                            <p class="invalid-feedback" id="est-foto-erro"></p>
                         </div>
+
+
                         <div class="col-12 col-lg-5 d-flex flex-column align-items-center gap-3">
                             <div class="preview-bow rounded border-doted d-flex flex-column align-items-center">
                                 <img src="../media/no-photo.png" alt="Pré-visualização da foto do estudante" hidden>
@@ -101,6 +115,11 @@
                     </div>
                 </div>
             </form>
+
+            <script src="/js/form-estudante.js"></script>
+
+
+            
         </div>
     </main>
     <footer class="mt-5 mb-2 px-2">
