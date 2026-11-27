@@ -50,42 +50,54 @@
         <div class="container py-4 mb-5">
             <h3><span class="fw-bold texto-verdeif">Cadastrar Participação</span></h3>
             <p>Realize o cadastro de participação para contribuir com as atividades do laboratório.</p>
-            <form class="p-3 border border-2 rounded" method="">
+
+
+
+
+            <form class="p-3 border border-2 rounded" method="post" action="https://httpbin.org/post" id="part-form">
                 <div class="row g-3">
                     <div class="col-12 col-lg-6">
                         <label for="estudanteNome" class="form-label fw-bolder">Estudante*</label>
                         <select name="estudanteNome" class="form-select" id="estudanteNome" required>
-                            <option selected disabled>Selecione um Estudante</option>
-                            <option value="aluno0">Fulano de Tal</option>
-                            <option value="aluno1">Beltrano da Silva</option>
-                            <option value="aluno2">Aluno</option>
+                            <option value="" selected disabled>Selecione um Estudante</option>
+                            <option value="1">Fulano de Tal</option>
+                            <option value="2">Beltrano da Silva</option>
+                            <option value="3">Aluno</option>
                         </select>
+                        <p class="invalid-feedback" id="part-estudante-erro"></p>
                     </div>
+
                     <div class="col-12 col-lg-6">
                         <label for="atividadeTipo" class="form-label fw-bolder">Atividade*</label>
                         <select name="atividadeTipo" class="form-select" id="atividadeTipo" required>
-                            <option selected disabled>Selecione uma Atividade</option>
-                            <option value="atividade">Atividade</option>
-                            <option value="feira">Feira</option>
-                            <option value="Projeto">Projeto</option>
+                            <option value="" selected disabled>Selecione uma Atividade</option>
+                            <option value="1">Atividade</option>
+                            <option value="2">Feira</option>
+                            <option value="3">Projeto</option>
                         </select>
+                        <p class="invalid-feedback" id="part-atividade-erro"></p>
                     </div>
+
                 </div>
                 <div class="col-12">
                         <label for="atividadeFuncao" class="form-label fw-bolder">Função*</label>
-                        <select name="atividadeTipo" aria-describedby="funcaoHelp" class="form-select" id="atividadeTipo" required>
-                            <option selected disabled>Selecione uma função</option>
+                        <select name="atividadeFuncao" aria-describedby="funcaoHelp" class="form-select" id="atividadeFuncao" required>
+                            <option value="" selected disabled>Selecione uma função</option>
                             <option value="organizador">Organizador</option>
                             <option value="planejador">Planejador</option>
                             <option value="programador">Programador</option>
                             <option value="suporte">Suporte</option>
                         </select>
                         <div id="funcaoHelp" class="form-text">Escolha a função que deseja realizar nesta atividade</div>
+                        <p class="invalid-feedback" id="part-funcao-erro"></p>
                     </div>
+
                 <div>
                     <label for="contribuicaoAlunoAtividade" class="form-label fw-bolder">Contribuições*</label>
                     <textarea name="contribuicaoAlunoAtividade" class="form-control" maxlength="512" placeholder="Como pretende ajudar o projeto?" id="contribuicaoAlunoAtividade" required></textarea>
+                    <p class="invalid-feedback" id="part-contribui-erro"></p>
                 </div>
+
                 <hr>
                 <div>
                     <div class="table-responsive">
@@ -117,6 +129,12 @@
                     <button type="submit" class="d-flex align-items-center gap-2 btn btn-success"><i class="bi bi-person-plus" style="font-size: 16px;" aria-hidden="true"></i> Cadastrar participação</button>
                 </div>
             </form>
+
+            <script src="/js/form-participacao.js"></script>
+
+
+
+
         </div>
     </main>
     <footer class="mt-5 mb-2 px-2">
