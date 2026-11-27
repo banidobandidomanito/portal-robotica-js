@@ -13,6 +13,8 @@ const est_foto_erro = document.getElementById("est-foto-erro");
 
 const email_format = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const formatos_foto = ["image/jpeg", "image/png", "image/webp"];
+const est_foto_prev = document.getElementById("est-foto-prev");
+const est_remover_foto = document.getElementById("removerFotoEstudante");
 
 est_formulario.addEventListener("submit",function(event){
 
@@ -75,8 +77,19 @@ est_foto.addEventListener("change",function(){
     
 
     if (est_foto.files[0] && formatos_foto.includes(est_foto.files[0].type)){
+
+        est_foto_prev.src= URL.createObjectURL(est_foto.files[0]);
+
         est_foto_erro.textContent = "";
         est_foto.classList.remove("is-invalid")
+
     }
+
+});
+
+est_remover_foto.addEventListener("click",function(){
+
+    est_foto_prev.src = "../media/no-photo.png";
+    est_foto.value= "";
 
 });
